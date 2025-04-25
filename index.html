@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>YSEレジシステム</title>
+  <link rel="stylesheet" href="style.css"> <!-- 外部CSSをリンク -->
+</head>
+<body>
+  <div class="language-switcher">
+    <button onclick="switchLanguage('ja')">日本語</button>
+    <button onclick="switchLanguage('en')">English</button>
+  </div>
+  <h1 id="title">YSEレジシステム</h1>
+  <form method="POST" action="register.php">
+    <div class="screen" id="display">0</div>
+    <input type="hidden" name="amount" id="amount" value="">
+    <div class="buttons">
+      <button type="button" onclick="appendNum('7')">7</button>
+      <button type="button" onclick="appendNum('8')">8</button>
+      <button type="button" onclick="appendNum('9')">9</button>
+      <button type="button" onclick="clearAll()" id="clear-all-button" class="cancel">CE</button>      <!-- CEボタン -->
+      <button type="button" onclick="appendNum('4')">4</button>
+      <button type="button" onclick="appendNum('5')">5</button>
+      <button type="button" onclick="appendNum('6')">6</button>
+      <button type="button" onclick="deleteLast()" id="clear-button" class="cancel">C</button> <!-- Cボタン -->
+      <button type="button" onclick="appendNum('1')">1</button>
+      <button type="button" onclick="appendNum('2')">2</button>
+      <button type="button" onclick="appendNum('3')">3</button>
+      <button type="button" onclick="addTax()" id="tax-button" class="tax">税込</button>
+      <button type="button" onclick="appendNum('0')">0</button>
+      <button type="button" onclick="appendNum('00')">00</button>
+      <button class="wide" type="submit" id="submit-button">計上（保存）</button>
+      <!-- 出金履歴ボタン -->
+      
+    </div>
+  </form>
+  <!-- 出金履歴ボタン -->
+  <form action="history.php" method="GET">
+    <button class="wide" type="submit" id="history-button">出金履歴</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
