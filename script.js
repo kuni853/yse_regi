@@ -80,7 +80,7 @@ const translations = {
     clear: "C",
     taxIncluded: "税込",
     taxExcluded: "税抜",
-    submit: "計上",
+    submit: "計上（保存）",
     history: "出金履歴"
   },
   en: {
